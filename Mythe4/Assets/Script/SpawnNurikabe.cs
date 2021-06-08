@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class SpawnNurikabe : MonoBehaviour
 {
-    public Transform Spawnpoint;
     public GameObject Prefab;
+
+    private void Start()
+    {
+        Prefab.SetActive(false);
+    }
     void OnTriggerEnter()
     {
-        Instantiate(Prefab, Spawnpoint.position, Spawnpoint.rotation);
+        Prefab.SetActive(true);
     }
 }

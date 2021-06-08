@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     float moveSide;
     float moveUp;
 
-    public float speed = 2f;
+    public float speed = 2.6f;
     public float jumpSpeed = 7f;
 
     Rigidbody rig;
@@ -31,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rig.AddForce(transform.up * moveUp, ForceMode.VelocityChange);
             isGrounded = false;
+        }
+        if(speed <= 0)
+        {
+            speed = 0;
         }
     }
     private void OnCollisionEnter(Collision collision)

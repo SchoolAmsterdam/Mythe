@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - CanGrab
+  - Trigger
   layers:
   - Default
   - TransparentFX
