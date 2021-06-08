@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Mythe4/Assets/Models/LargeBuilding_Tycho_1.fbx.meta
 guid: 41b2b07d98d81c64087d69afef4cbbb6
+=======
+guid: 0d7b76ba1eb78024db07221588e020c8
+>>>>>>> Stashed changes:Mythe4/Assets/Models/Cans/Can1.fbx.meta
+=======
+guid: 41b2b07d98d81c64087d69afef4cbbb6
+>>>>>>> Stashed changes
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
