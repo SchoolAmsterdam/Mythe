@@ -12,6 +12,8 @@ public class Dialog : MonoBehaviour
     public bool checkBool;
 
     public GameObject dialogStuff;
+    public GameObject trigger;
+    public GameObject objectMessageNo;
     PlayerMovement playerMovementScript;
     AdvancedMovement advancedMovementSpeed;
     //public Animator textDisplayAnim;
@@ -23,9 +25,10 @@ public class Dialog : MonoBehaviour
         advancedMovementSpeed = GetComponent<AdvancedMovement>();
         //source = GetComponent<AudioSource>();
 
-        dialogStuff.SetActive(false);
         checkBool = false;
         dialogStuff.SetActive(false);
+        trigger.SetActive(true);
+        objectMessageNo.SetActive(false);
     }
     void Update()
     {
@@ -41,12 +44,14 @@ public class Dialog : MonoBehaviour
             else if (index == 5)
             {
                 dialogStuff.SetActive(false);
+                trigger.SetActive(false);
                 playerMovementScript.speed = 2.6f;
                 advancedMovementSpeed.speedBoost = 1.2f;
+                objectMessageNo.SetActive(true);
+                //Destroy(this);
             }
         }
     }
-
     IEnumerator Type()
     {
         foreach (char letter in sentences[index].ToCharArray())
@@ -84,7 +89,6 @@ public class Dialog : MonoBehaviour
             dialogStuff.SetActive(true);
             playerMovementScript.speed = 0f;
             advancedMovementSpeed.speedBoost = 0f;
-            Debug.Log("PlaseHalp");
             StartCoroutine(Type());
         }
         else
