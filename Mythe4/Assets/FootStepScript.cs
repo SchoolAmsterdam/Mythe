@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FootStepScript : MonoBehaviour {
+public class WalkScript : MonoBehaviour {
 
     // Use this for initialization
     CharacterController cc;

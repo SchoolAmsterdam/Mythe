@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkScript : MonoBehaviour
+public class FootStepScript : MonoBehaviour
 {
 	public float stepRate = 0.5f;
 	public float stepCoolDown;
